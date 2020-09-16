@@ -1,0 +1,12 @@
+﻿@model List<Card>
+<form asp-action="ProcessCards" asp-controller="Home">
+    @foreach (Card c in Model)
+    {
+        <p>@c.Name</p>
+        <p>@c.Color</p>
+        <input name="SelectedCard" type="checkbox" value="@c.Id" />
+        
+    }
+
+    <input type="submit" />
+</form>
